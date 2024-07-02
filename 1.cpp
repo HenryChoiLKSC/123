@@ -21,10 +21,14 @@ void loop()
   lcd.print("C");                                                             
 
   if (mlx.readObjectTempC() >= 31) {
-  analogWrite(11,150);
+  analogWrite(5,150);
+  analogWrite(6,0);
   analogWrite(10,150);
+  analogWrite(11,0)
   }
   else (mlx.readObjectTempC() <= 27) ; {
+  analogWrite(5,0)
+  analogWrite(6,0)
   analogWrite(11,0);
   analogWrite(10,0);
   } 
