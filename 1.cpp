@@ -20,11 +20,13 @@ void loop()
   lcd.print((char)223);                      
   lcd.print("C");                                                             
 
-  if (mlx.readObjectTempC() >= 30) {
+  if (mlx.readObjectTempC() >= 31) {
   analogWrite(11,150);
+  analogWrite(10,150);
   }
-  else (mlx.readObjectTempC() <= 20) ; {
+  else (mlx.readObjectTempC() <= 27) ; {
   analogWrite(11,0);
+  analogWrite(10,0);
   } 
   delay(10000);
 }
